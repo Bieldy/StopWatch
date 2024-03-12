@@ -21,12 +21,14 @@ namespace STOPWATCH
             Console.WriteLine("Quanto tempo deseja contar?");
 
             string data = Console.ReadLine().ToLower(); // o ToLower converte todos os caracteres para minusculo
-            char type = char.Parse(data.Substring(data.Length - 1, 1)); // o Length pega o ultimo caracter que o usuario digitou
+            char type = char.Parse(data.Substring(data.Length - 1, 1)); // o Length conta quantos caracteres tem e pega o ultimo caracter que o usuario digitou
             // aqui foi feita conversão do da string para char 
             // o SUBSTRING ele possibilita pegar 1 ou mais caracteres na mesma posição do que se é digitado.
             // Por exemplo: (1,2)= O 1 é a posição o 2 é a quantidade de caracter que ele vai pegar. 
+            int time = int.Parse(data.Substring(0, data.Length - 1));
             Console.WriteLine(data);
             Console.WriteLine(type);
+            Console.WriteLine(time);
 
 
 
